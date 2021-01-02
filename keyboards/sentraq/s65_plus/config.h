@@ -20,6 +20,9 @@
 #define MATRIX_COL_PINS { F6, F5, F4, F1, F0, E6, B0, B1, D5, B2, B3, D0, D1, D2, D4, D6, D7, F7 }
 #define UNUSED_PINS
 
+#define LED_CAPS_LOCK_PIN B7
+#define LED_PIN_ON_STATE 0
+
 /* number of backlight levels */
 #define BACKLIGHT_PIN B7
 #define BACKLIGHT_LEVELS 3
@@ -36,7 +39,7 @@
 #define DIODE_DIRECTION COL2ROW
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCING_DELAY 5
+#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

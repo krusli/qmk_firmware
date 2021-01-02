@@ -35,22 +35,17 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-#ifndef ADB_H
-#define ADB_H
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
 
-#if !(defined(ADB_PORT) && \
-      defined(ADB_PIN)  && \
-      defined(ADB_DDR)  && \
-      defined(ADB_DATA_BIT))
-#   error "ADB port setting is required in config.h"
+#if !(defined(ADB_PORT) && defined(ADB_PIN) && defined(ADB_DDR) && defined(ADB_DATA_BIT))
+#    error "ADB port setting is required in config.h"
 #endif
 
-#define ADB_POWER       0x7F
-#define ADB_CAPS        0x39
-
+#define ADB_POWER 0x7F
+#define ADB_CAPS 0x39
 
 // ADB host
 void     adb_host_init(void);
@@ -61,6 +56,3 @@ void     adb_host_listen(uint8_t cmd, uint8_t data_h, uint8_t data_l);
 void     adb_host_kbd_led(uint8_t led);
 void     adb_mouse_task(void);
 void     adb_mouse_init(void);
-
-
-#endif

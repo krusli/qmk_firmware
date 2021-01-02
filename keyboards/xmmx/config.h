@@ -23,6 +23,10 @@
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
+#define LED_CAPS_LOCK_PIN B6
+#define LED_SCROLL_LOCK_PIN B5
+#define LED_PIN_ON_STATE 0
+
 /* number of backlight levels */
 
 #ifdef BACKLIGHT_PIN
@@ -30,7 +34,7 @@
 #endif
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCING_DELAY 5
+#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
