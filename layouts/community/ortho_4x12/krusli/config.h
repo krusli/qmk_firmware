@@ -1,3 +1,4 @@
 #pragma once
 #define USB_MAX_POWER_CONSUMPTION 100
 #define BACKLIGHT_LEVELS 3
+#define USB_POLLING_INTERVAL_MS 1

@@ -4,3 +4,6 @@ ifeq ($(LAYOUTS_HAS_RGB),yes)
 endif
 AUDIO_ENABLE = no
 BACKLIGHT_ENABLE = yes
+
+VIA_ENABLE = yes
+LTO_ENABLE = yes

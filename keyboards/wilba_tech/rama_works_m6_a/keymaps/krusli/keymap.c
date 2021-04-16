@@ -12,8 +12,7 @@ extern keymap_config_t keymap_config;
 enum layers
 {
     _LAYER0,
-    _LAYER1,
-    _LAYER2
+    _LAYER1
 };
 
 enum custom_keycodes
@@ -54,14 +53,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LAYER0] = LAYOUT(
-        MUTE, DEAFEN, TO(_LAYER1),
-        GIT_ADD, GIT_COMMIT, GIT_PUSH),
+        KC_ESC, KC_UP, TO(_LAYER1),
+        KC_Z, KC_X, KC_SPACE),
     [_LAYER1] = LAYOUT(
-        KC_VOLD, KC_VOLU, TO(_LAYER2),
-        KC_MPRV, KC_MPLY, KC_MNXT),
-    [_LAYER2] = LAYOUT(
-        KC_ESC, KC_UP, TO(_LAYER0),
-        KC_Z, KC_X, KC_SPACE)};
+        KC_VOLD, KC_VOLU, TO(_LAYER0),
+        KC_MPRV, KC_MPLY, KC_MNXT),};
 
 void matrix_init_user(void)
 {
